@@ -1,0 +1,18 @@
+{
+  "name": "js-calculator",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Vlad Zelenko"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/VladZelenko/Js-calculator",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/libs/",
+    "test",
+    "tests"
+  ]
+}

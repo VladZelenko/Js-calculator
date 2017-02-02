@@ -1,0 +1,9 @@
+----------Запуск проекту------------------------------------------
+npm init
+
+sudo npm i -D gulp gulp-sass browser-sync gulp-concat gulp-uglifyjs gulp-cssnano gulp-rename del gulp-imagemin imagemin-pngquant gulp-cache gulp-autoprefixer gulp-sourcemaps
+
+bower init
+
+bower install - це якщо вже скинув готовий bower.json
+-------------------------------------------------------------------
