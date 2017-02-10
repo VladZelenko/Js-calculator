@@ -1,0 +1,66 @@
+.calculator {
+	width: 300px;
+	min-height: 600px;
+	margin: 50px auto;
+	.calc {
+		border-collapse: collapse;
+		border-spacing: 0px;
+		.screen {
+			width: 300px;
+			height: 120px;
+			background: #e3e7e9;
+			border: none;
+			border-bottom: none;
+			outline: none;
+			text-align: right;
+			font: 300 28px 'Arial', sans-serif;
+			color: #46494d;
+			vertical-align: bottom;
+		}
+		.numbers-btn {
+			width: 75px;
+			height: 75px;
+			color: #979ca4;
+			background: #fafbfe;
+			outline: none;
+			border: 1px solid #eeeff2;
+			&:active{background-color: #F5F5F5;}
+		}
+		.func-btn {
+			@extend .numbers-btn;
+			background: #f7f8f9;
+			&:active {background-color: #dadde0;}
+		}
+		.zero {
+			@extend .numbers-btn;
+			width: 150px;
+			height: 75px;
+			background: #fafbfe;
+		}
+		.clean-btn {
+			@extend .zero;
+			color: #FF8C00;
+			background: #f7f8fb;
+			&:active {background: #dadde0}
+		}
+		.equally {
+			@extend .numbers-btn;
+			height: 150px;
+			background: #FF8C00;
+			color: #ffffff;
+			&:active {background: #FF7F00;}
+		}
+		input {
+			font: 300 20px 'Arial', sans-serif;
+			margin-right: -4px;
+		}
+		.corection-pos {
+			position: relative;
+			bottom: 37px;
+		}
+		.corection-pos-2 {
+			@extend .corection-pos;
+			bottom: 75px;
+		}
+	}
+}

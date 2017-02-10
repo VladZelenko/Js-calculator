@@ -2,12 +2,159 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>JS Calculator</title>
+	<title>JQuery Calculator</title>
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+	<form class="calculator" name="calculator">
+		<ul class="calc">
+			<li>
+				<input type="text" name="input" size="16" class="screen">
+			</li>
+			<li>
+				<input type="button" name="clear" value="CLEAR" OnClick="calc.input.value = ''" class="clean-btn">
+				<input type="button" name="division"  value="/" OnClick="calc.input.value += '/'" class="func-btn">
+				<input type="button" name="multiplication" value="x" OnClick="calc.input.value += '*'" class="func-btn">
+			</li>
+			<li>
+				<input type="button" name="seven" value="7" OnClick="calc.input.value += '7'" class="numbers-btn">
+				<input type="button" name="eight" value="8" OnClick="calc.input.value += '8'" class="numbers-btn">
+				<input type="button" name="nine" value="9" OnClick="calc.input.value += '9'" class="numbers-btn">
+				<input type="button" name="minus" value="-" OnClick="calc.input.value += '-'" class="func-btn">
+			</li>
+			<li>
+				<input type="button" name="four" value="4" OnClick="calc.input.value += '4'" class="numbers-btn">
+				<input type="button" name="five" value="5" OnClick="calc.input.value += '5'" class="numbers-btn">
+				<input type="button" name="six" value="6" OnClick="calc.input.value += '6'" class="numbers-btn">
+				<input type="button" name="plus" value="+" OnClick="calc.input.value += '+'" class="func-btn">
+			</li>
+			<li>
+				<input type="button" name="one" value="1" OnClick="calc.input.value += '1'" class="numbers-btn corection-pos">
+				<input type="button" name="two" value="2" OnClick="calc.input.value += '2'" class="numbers-btn corection-pos">
+				<input type="button" name="three" value="3" OnClick="calc.input.value += '3'" class="numbers-btn corection-pos">
+				<input type="button" name="consider" value="=" OnClick="calc.input.value = eval(calc.input.value)" class="equally">
+			</li>
+			<li>
+				<input type="button" name="zero" value="0" OnClick="calc.input.value += '0'" class="numbers-btn zero corection-pos-2">
+				<input type="button" name="dot" value="," OnClick="calc.input.value += ','" class="numbers-btn corection-pos-2">
+			</li>
+		</ul>
 
-</body>
-</html>
+<!-- 		<ul class="calc">
+			<li>
+				<input type="text" name="input" size="16" class="screen">
+			</li>
+			<li>
+				<button OnClick="calc.input.value = ''" class="clean-btn">CLEAR</button>
+				<button OnClick="calc.input.value += '/'" class="func-btn">/</button>
+				<button OnClick="calc.input.value += '*'" class="func-btn">x</button>
+			</li>
+			<li>
+				<button OnClick="calc.input.value += '7'" class="numbers-btn">7</button>
+				<button OnClick="calc.input.value += '8'" class="numbers-btn">8</button>
+				<button OnClick="calc.input.value += '9'" class="numbers-btn">9</button>
+				<button OnClick="calc.input.value += '-'" class="func-btn">-</button>
+			</li>
+			<li>
+				<button OnClick="calc.input.value += '4'" class="numbers-btn">4</button>
+				<button OnClick="calc.input.value += '5'" class="numbers-btn">5</button>
+				<button OnClick="calc.input.value += '6'" class="numbers-btn">7</button>
+				<button OnClick="calc.input.value += '+'" class="func-btn">+</button>
+			</li>
+			<li>
+				<button OnClick="calc.input.value += '1'" class="numbers-btn corection-pos">1</button>
+				<button OnClick="calc.input.value += '2'" class="numbers-btn corection-pos">2</button>
+				<button OnClick="calc.input.value += '3'" class="numbers-btn corection-pos">3</button>
+				<button OnClick="calc.input.value = eval(calc.input.value)" class="equally">=</button>
+			</li>
+			<li>
+				<button OnClick="calc.input.value += '0'" class="numbers-btn zero corection-pos-2">0</button>
+				<button OnClick="calc.input.value += ','" class="numbers-btn corection-pos-2">.</button>
+			</li>
+		</ul> -->
+
+<!-- 		<table class="calc" cellspacing="0" cellpadding="0">
+			<tr>
+				<td class="screen-wrap" colspan=4 align=middle>
+					<input type="text" name="input" size="16" class="screen">
+				</td>
+			</tr>
+				<tr>
+					<td>
+						<input type="button" name="clear" value="CLEAR" OnClick="calc.input.value = ''" class="clean-btn">
+						<input type="button" name=""  value="%" OnClick="calc.input.value += '%'" class="func-btn">
+						<input type="button" name="division"  value="/" OnClick="calc.input.value += '/'" class="func-btn">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" name="seven" value="7" OnClick="calc.input.value += '7'" class="numbers-btn">
+						<input type="button" name="eight" value="8" OnClick="calc.input.value += '8'" class="numbers-btn">
+						<input type="button" name="nine" value="9" OnClick="calc.input.value += '9'" class="numbers-btn">
+						<input type="button" name="multiplication" value="x" OnClick="calc.input.value += '*'" class="func-btn">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" name="four" value="4" OnClick="calc.input.value += '4'" class="numbers-btn">
+						<input type="button" name="five" value="5" OnClick="calc.input.value += '5'" class="numbers-btn">
+						<input type="button" name="six" value="6" OnClick="calc.input.value += '6'" class="numbers-btn">
+						<input type="button" name="minus" value="-" OnClick="calc.input.value += '-'" class="func-btn">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="button" name="one" value="1" OnClick="calc.input.value += '1'" class="numbers-btn">
+							<input type="button" name="two" value="2" OnClick="calc.input.value += '2'" class="numbers-btn">
+							<input type="button" name="three" value="3" OnClick="calc.input.value += '3'" class="numbers-btn">
+							<input type="button" name="plus" value="+" OnClick="calc.input.value += '+'" class="func-btn">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="button" name="zero" value="0" OnClick="calc.input.value += '0'" class="numbers-btn zero">
+							<input type="button" name="dot" value="," OnClick="calc.input.value += ','" class="numbers-btn">
+							<input type="button" name="consider" value="=" OnClick="calc.input.value = eval(calc.input.value)" class="equally">
+						</td>
+					</tr>
+				</table> -->
+<!-- 				<table class="calc">
+					<tr>
+						<td class="screen-wrap" colspan=4 align=middle>
+							<input type="text" name="input" size="16" class="screen">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="button" name="clear" value="C" OnClick="calc.input.value = ''" class="clean-btn"></td>
+						<td><input type="button" name="division"  value="/" OnClick="calc.input.value += '/'" class="func-btn"></td>
+						<td><input type="button" name="multiplication" value="x" OnClick="calc.input.value += '*'" class="func-btn"></td>
+					</tr>
+					<tr>
+						<td><input type="button" name="seven" value="7" OnClick="calc.input.value += '7'" class="numbers-btn"></td>
+						<td><input type="button" name="eight" value="8" OnClick="calc.input.value += '8'" class="numbers-btn"></td>
+						<td><input type="button" name="nine" value="9" OnClick="calc.input.value += '9'" class="numbers-btn"></td>
+						<td><input type="button" name="minus" value="-" OnClick="calc.input.value += '-'" class="func-btn"></td>
+					</tr>
+					<tr>
+						<td><input type="button" name="four" value="4" OnClick="calc.input.value += '4'" class="numbers-btn"></td>
+						<td><input type="button" name="five" value="5" OnClick="calc.input.value += '5'" class="numbers-btn"></td>
+						<td><input type="button" name="six" value="6" OnClick="calc.input.value += '6'" class="numbers-btn"></td>
+						<td><input type="button" name="plus" value="+" OnClick="calc.input.value += '+'" class="func-btn"></td>
+					</tr>
+					<tr>
+						<td><input type="button" name="one" value="1" OnClick="calc.input.value += '1'" class="numbers-btn"></td>
+						<td><input type="button" name="two" value="2" OnClick="calc.input.value += '2'" class="numbers-btn"></td>
+						<td><input type="button" name="three" value="3" OnClick="calc.input.value += '3'" class="numbers-btn"></td>
+						<td rowspan="2"><input type="button" name="consider" value="=" OnClick="calc.input.value = eval(calc.input.value)" class="equally"></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="button" name="zero" value="0" OnClick="calc.input.value += '0'" class="numbers-btn zero"></td>
+						<td><input type="button" name="dot" value="," OnClick="calc.input.value += ','" class="numbers-btn"></td>
+					</tr>
+				</table> -->
+			</form>
+		</form>
+	</body>
+	</html>
